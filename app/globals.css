@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-blush-50 text-ink-900 font-body antialiased;
+}
+
+/* Signature motif: the blue "highlight box" behind a key word,
+   echoing the highlight behind "Zahra" in the hero. */
+.highlight-mark {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+}
+.highlight-mark::before {
+  content: "";
+  position: absolute;
+  left: -0.15em;
+  right: -0.15em;
+  bottom: 0.05em;
+  height: 0.38em;
+  background: rgba(59, 130, 246, 0.22);
+  border-radius: 0.15em;
+  z-index: -1;
+}
+
+.eyebrow {
+  @apply font-display italic text-blush-500 text-sm sm:text-base tracking-wide;
+}
+
+.glass {
+  @apply bg-white/60 backdrop-blur-xl border border-white/70 shadow-glass;
+}
+
+.glass-navy {
+  @apply bg-white/[0.04] backdrop-blur-xl border border-white/10;
+}
+
+.section-pad {
+  @apply px-6 sm:px-10 lg:px-20 py-24 sm:py-28;
+}
+
+/* Custom scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fef6fa;
+}
+::-webkit-scrollbar-thumb {
+  background: #f9c9e2;
+  border-radius: 10px;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Cursor glow */
+.cursor-glow {
+  position: fixed;
+  pointer-events: none;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  transition: opacity 0.3s ease;
+}
