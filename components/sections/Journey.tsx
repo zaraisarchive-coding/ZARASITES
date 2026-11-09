@@ -15,12 +15,15 @@ export default function Journey() {
   const height = useSpring(scrollYProgress, { stiffness: 80, damping: 20 });
 
   return (
-    <section id="journey" className="section-pad">
+    <section
+      id="journey"
+      className="section-pad relative overflow-hidden !bg-[#FFC9DE]"
+    >
       <SectionHeading eyebrow="How I got here" title="My Journey" align="center" />
 
       <div ref={ref} className="max-w-2xl mx-auto mt-16 relative">
         {/* base line */}
-        <div className="absolute left-[7px] top-0 bottom-0 w-[2px] bg-blush-200" />
+        <div className="absolute left-[7px] top-0 bottom-0 w-[2px] bg-white/60" />
         {/* animated progress line */}
         <motion.div
           style={{ scaleY: height }}

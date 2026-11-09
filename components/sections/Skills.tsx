@@ -12,8 +12,6 @@ import {
   Github,
   MonitorPlay,
   FileImage,
-  Send,
-  Cloud,
   Puzzle,
   Users,
   MessageCircle,
@@ -36,8 +34,6 @@ const ICONS: Record<string, any> = {
   "VS Code": MonitorPlay,
   Figma: Palette,
   Canva: FileImage,
-  Postman: Send,
-  Render: Cloud,
   "Problem Solving": Puzzle,
   Teamwork: Users,
   Communication: MessageCircle,
@@ -53,7 +49,10 @@ const GROUP_ICONS: Record<string, any> = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="section-pad">
+    <section
+      id="skills"
+      className="section-pad relative overflow-hidden !bg-[#FFC9DE]"
+    >
       <SectionHeading
         eyebrow="What I work with"
         title="Skills"

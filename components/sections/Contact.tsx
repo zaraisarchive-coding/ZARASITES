@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, Download } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 
@@ -6,33 +6,29 @@ const CONTACTS = [
   {
     icon: Mail,
     label: "Email",
-    value: "fathimah@email.com",
-    href: "mailto:fathimah@email.com",
+    value: "zaraisarchive@gmail.com",
+    href: "mailto:zaraisarchive@gmail.com",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
     value: "linkedin.com/in/fathimahazzahra",
-    href: "#",
+    href: "https://linkedin.com/in/fathimahazzahra",
   },
   {
     icon: Github,
     label: "GitHub",
-    value: "github.com/fathimahazzahra",
-    href: "#",
-  },
-  {
-    icon: Download,
-    label: "Download CV",
-    value: "CV_FathimahAzZahra.pdf",
-    href: "/CV_FathimahAzZahra.pdf",
-    download: true,
+    value: "github.com/zaraisarchive-coding",
+    href: "https://github.com/zaraisarchive-coding",
   },
 ];
 
 export default function Contact() {
   return (
-    <section id="contact" className="section-pad">
+    <section
+      id="contact"
+      className="section-pad relative overflow-hidden !bg-[#FFC9DE]"
+    >
       <SectionHeading
         eyebrow="Let's talk"
         title={"Get in touch"}
@@ -45,7 +41,6 @@ export default function Contact() {
           <Reveal key={c.label} delay={i * 0.08}>
             <a
               href={c.href}
-              download={"download" in c ? c.download : undefined}
               target={c.href.startsWith("http") ? "_blank" : undefined}
               rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
               className="group flex items-center gap-4 glass rounded-2xl p-5 hover:bg-white/90 transition-colors"
@@ -66,7 +61,9 @@ export default function Contact() {
 
       <Reveal delay={0.3} className="text-center mt-12">
         <a
-          href="#contact"
+          href="https://wa.me/6281230139086"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center rounded-full bg-navy-900 hover:bg-accent-blue transition-colors text-white font-ui font-medium px-8 py-3.5"
         >
           Contact Me

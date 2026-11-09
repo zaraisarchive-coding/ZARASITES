@@ -5,12 +5,14 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative bg-blush-50 overflow-hidden pt-32 pb-16 px-6 sm:px-10 lg:px-16"
+      className="relative bg-[#FFC9DE] overflow-hidden pt-32 pb-16 px-6 sm:px-10 lg:px-16"
     >
       {/* PORTFOLIO wordmark */}
-      <h1 className="font-display italic text-blush-400 leading-none select-none pointer-events-none text-[14vw] sm:text-[11vw] lg:text-[8.5vw] whitespace-nowrap -ml-1">
-        PORTFOLIO
-      </h1>
+      <div className="max-w-7xl mx-auto">
+        <h1 className="font-display italic text-blush-400 leading-none select-none pointer-events-none text-[14vw] sm:text-[11vw] lg:text-[8.5vw] whitespace-nowrap">
+          PORTFOLIO
+        </h1>
+      </div>
 
       <div className="relative grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-end gap-8 mt-4 lg:mt-0 max-w-7xl mx-auto">
         {/* Left: greeting + name */}
@@ -35,7 +37,7 @@ export default function Hero() {
         <div className="relative z-10 order-1 lg:order-2 w-full max-w-md mx-auto">
           <div className="relative aspect-[3/4] w-full">
             <Image
-              src="/profile.jpg"
+              src="/profile.png"
               alt="Fathimah Az Zahra"
               fill
               priority
@@ -56,7 +58,7 @@ export default function Hero() {
           />
           <InfoCard
             icon={<Handshake className="w-4 h-4" />}
-            text="Berpengalaman merancang solusi digital"
+            text="Terbuka untuk internship dan kolaborasi proyek"
           />
         </div>
       </div>

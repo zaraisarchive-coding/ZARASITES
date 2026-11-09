@@ -1,7 +1,7 @@
 export const stats = [
-  { value: 10, suffix: "+", label: "Projects" },
+  { value: 3, suffix: "+", label: "Projects" },
   { value: 5, suffix: "+", label: "Certificates" },
-  { value: 3, suffix: "+", label: "Years Learning" },
+  { value: 2, suffix: "+", label: "Years Learning" },
   { value: 0, suffix: "", label: "Open Internship", isText: true },
 ];
 
@@ -16,7 +16,7 @@ export const skillGroups = [
   },
   {
     title: "Tools",
-    items: ["Git", "GitHub", "VS Code", "Figma", "Canva", "Postman", "Render"],
+    items: ["Git", "GitHub", "VS Code", "Figma"],
   },
   {
     title: "Soft Skills",
@@ -30,24 +30,27 @@ export const projects = [
     role: "Front-End Developer & UI/UX Designer",
     tech: ["Next.js", "TypeScript", "Tailwind", "Supabase", "Figma"],
     size: "lg",
-    github: "#",
-    demo: "#",
+    image: "/PAMA Studio.png",
+    github: "https://github.com/zaraisarchive-coding/PAMA-Studio",
+    demo: "",
   },
   {
-    title: "Lidia Digital Library",
+    title: "ITFest Landing Page",
     role: "Front-End Developer",
     tech: ["Next.js", "TypeScript", "Tailwind"],
     size: "md",
-    github: "#",
-    demo: "#",
+    image: "/ITFest.png",
+    github: "https://github.com/zaraisarchive-coding/itfest-landingpage",
+    demo: "",
   },
   {
     title: "SkyGuard AI",
     role: "UI/UX Designer",
     tech: ["Figma", "Next.js", "Tailwind"],
     size: "md",
-    github: "#",
-    demo: "#",
+    image: "/SkyGuard AI.png",
+    github: "",
+    demo: "https://skyguardai-id.web.app/",
   },
 ];
 
@@ -62,11 +65,11 @@ export const journey = [
 ];
 
 export const certificates = [
-  { title: "Sertifikat 1", issuer: "—", image: "/certificates/cert-1.jpg" },
-  { title: "Sertifikat 2", issuer: "—", image: "/certificates/cert-2.jpg" },
-  { title: "Sertifikat 3", issuer: "—", image: "/certificates/cert-3.jpg" },
-  { title: "Sertifikat 4", issuer: "—", image: "/certificates/cert-4.jpg" },
-  { title: "Sertifikat 5", issuer: "—", image: "/certificates/cert-5.jpg" },
+  { title: "Juara 3 BMC COMPFEST-UI", issuer: "—", image: "/Certificates 1.jpg" },
+  { title: "Sertifikat Peserta UI/UX Design", issuer: "—", image: "/Certificate 2.png" },
+  { title: "Pelatihan ExplorAItion", issuer: "—", image: "/Certificate3.png" },
+  { title: "Pelatihan Cyber Security", issuer: "—", image: "/Certificate 4.jpg" },
+  { title: "Sertifikat Peserta NIC", issuer: "—", image: "/Certificate 5.png" },
 ];
 
 export const techStack = [
@@ -77,5 +80,4 @@ export const techStack = [
   "Tailwind",
   "VS Code",
   "Figma",
-  "Postman",
 ];

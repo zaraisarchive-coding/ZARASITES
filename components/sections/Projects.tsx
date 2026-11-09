@@ -29,16 +29,29 @@ export default function Projects() {
                 p.size === "lg" ? "aspect-[16/9]" : "aspect-[4/3]"
               }`}
             >
-              {/* placeholder gradient "image" */}
-              <div className="absolute inset-0 bg-gradient-to-br from-navy-700 via-navy-800 to-blush-500/30 transition-transform duration-500 group-hover:scale-110" />
+              {/* gradient (cadangan kalau gambar tidak ada) */}
+              <div className="absolute inset-0 bg-gradient-to-br from-navy-700 via-navy-800 to-blush-500/30" />
 
-              {/* base label */}
-              <div className="absolute bottom-0 left-0 p-6">
+              {/* gambar tampilan utama web */}
+              {p.image && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
+              )}
+
+              {/* label bawah (dengan gradasi supaya teks tetap terbaca) */}
+              <div className="absolute inset-x-0 bottom-0 p-6 pt-16 bg-gradient-to-t from-navy-900/90 to-transparent">
                 <h3 className="font-ui font-semibold text-xl">{p.title}</h3>
-                <p className="text-sm text-white/60">{p.role}</p>
+                <p className="text-sm text-white/70">{p.role}</p>
               </div>
 
-              {/* hover overlay */}
+              {/* overlay saat hover */}
               <div className="absolute inset-0 bg-navy-900/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex flex-col justify-between p-6">
                 <div>
                   <h3 className="font-ui font-semibold text-xl mb-1">
@@ -56,19 +69,28 @@ export default function Projects() {
                     ))}
                   </div>
                 </div>
+
                 <div className="flex gap-3">
-                  <a
-                    href={p.github}
-                    className="inline-flex items-center gap-1.5 text-sm font-ui font-medium bg-white/10 hover:bg-white/20 transition-colors rounded-full px-4 py-2"
-                  >
-                    <Github className="w-4 h-4" /> GitHub
-                  </a>
-                  <a
-                    href={p.demo}
-                    className="inline-flex items-center gap-1.5 text-sm font-ui font-medium bg-accent-blue hover:bg-blue-500 transition-colors rounded-full px-4 py-2"
-                  >
-                    <ExternalLink className="w-4 h-4" /> Live Demo
-                  </a>
+                  {p.github && (
+                    <a
+                      href={p.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-ui font-medium bg-white/10 hover:bg-white/20 transition-colors rounded-full px-4 py-2"
+                    >
+                      <Github className="w-4 h-4" /> GitHub
+                    </a>
+                  )}
+                  {p.demo && (
+                    <a
+                      href={p.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-ui font-medium bg-accent-blue hover:bg-blue-500 transition-colors rounded-full px-4 py-2"
+                    >
+                      <ExternalLink className="w-4 h-4" /> Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

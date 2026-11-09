@@ -12,7 +12,10 @@ export default function Certificates() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section id="certificates" className="section-pad">
+    <section
+      id="certificates"
+      className="section-pad relative overflow-hidden !bg-[#FFC9DE]"
+    >
       <SectionHeading eyebrow="Proof of learning" title="Certificates" align="center" />
 
       <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 mt-14">

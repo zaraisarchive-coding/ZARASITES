@@ -73,7 +73,9 @@ export default function Navbar() {
           ))}
         </nav>
         <a
-          href="#contact"
+          href="https://wa.me/6281230139086"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden sm:inline-flex items-center rounded-full bg-navy-900 text-white text-sm font-ui font-medium px-5 py-2 hover:bg-accent-blue transition-colors"
         >
           Contact Me
