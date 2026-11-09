@@ -30,7 +30,7 @@ export const projects = [
     role: "Front-End Developer & UI/UX Designer",
     tech: ["Next.js", "TypeScript", "Tailwind", "Supabase", "Figma"],
     size: "lg",
-    image: "/PAMA Studio.png",
+    image: "/PAMA STUDIO.png",
     github: "https://github.com/zaraisarchive-coding/PAMA-Studio",
     demo: "",
   },
